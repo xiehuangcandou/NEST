@@ -219,14 +219,11 @@ contract StandardToken is ERC20, BasicToken {
   {
       
     require(_value <= IterableMapping.iterate_getValue(balances, _from));
-    // require(_value <= balances[_from]);
     require(_value <= allowed[_from][msg.sender]);
     require(_to != address(0));
 
     IterableMapping.insert(balances, _from, IterableMapping.iterate_getValue(balances, _from).sub(_value));
     IterableMapping.insert(balances, _to, IterableMapping.iterate_getValue(balances, _to).add(_value));
-    // balances[_from] = balances[_from].sub(_value);
-    // balances[_to] = balances[_to].add(_value);
     allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value);
     emit Transfer(_from, _to, _value);
     return true;
@@ -337,8 +334,8 @@ contract IBNEST is StandardToken {
         return IterableMapping.iterate_next(balances, num);
     }
     function balancesGetValue(uint256 num) public view returns(address, uint256) {
-        address key;                            //  分红地址
-        uint256 value;                          //  持有代币数量
+        address key;                            
+        uint256 value;                          
         (key, value) = IterableMapping.iterate_get(balances, num);
         return (key, value);
     }
