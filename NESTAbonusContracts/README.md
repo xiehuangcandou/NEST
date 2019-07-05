@@ -124,3 +124,5 @@ Reason for use: more decentralized, cancel 10% dividends, and return the operati
 
 The dividend distribution algorithm is: receiving the ETH in the dividend pool according to the proportion of the number of NESTs held by the individual in the total circulation. In the process of dividend distribution, the uniqueness of the dividends received by NEST must be guaranteed, that is, each NEST can only receive one dividend in one dividend period.
 
+
+
