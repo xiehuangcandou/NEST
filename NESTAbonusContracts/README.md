@@ -1,16 +1,8 @@
 # Dividend system contract specification document
-[TOC]
+
 ## Architecture
-```
-graph TB
-    Business_Contract -. Fees .-> Dividend_pool_contract
-User -. Store_NEST .-> NEST_Storage_Contract
-Dividend_calculation_contract -. Receiving .-> User
-subgraph dividend system
-    Dividend_pool_contract --> Dividend_calculation_contract
-    NEST_Storage_Contract --> Dividend_calculation_contract
-end
-```
+
+![image](https://nestapp.oss-cn-beijing.aliyuncs.com/NestCoreForGitHub/NESTAbonusContracts_1.png)
 
 ## Contract address
 - Dividend pool contract:[0x831945D1B744499C16d0072dF1F1C8322002fDd8](https://etherscan.io/address/0x831945d1b744499c16d0072df1f1c8322002fdd8#internaltx)
@@ -19,40 +11,17 @@ end
 
 ## Operating procedures
 ### Deposited in NEST
-```
-sequenceDiagram
-    User->>NEST Storage Contract: Authorized Storage Amount (Transaction)
-User->>Dividend calculation contract: Deposit in NEST (transaction)
-Dividend calculation contract-->>NEST Storage Contract: Trigger authorization transfer (internal transaction)
-loop transfer (internal transaction)
-  NEST Storage Contract-->>User: 
-  User->>NEST Storage Contract: 
-end
-```
+![image](https://nestapp.oss-cn-beijing.aliyuncs.com/NestCoreForGitHub/NESTAbonusContracts_2.png)
 
 ### Take out NEST (normal process)
-```
-sequenceDiagram
-    User->>Dividend calculation contract: Take out the NEST amount (transaction)
-Dividend calculation contract->>NEST Storage Contract: Trigger NEST transfer (internal transaction)
-NEST Storage Contract-->>User: NEST Transfer (internal transaction)
-```
+![image](https://nestapp.oss-cn-beijing.aliyuncs.com/NestCoreForGitHub/NESTAbonusContracts_3.png)
+
 
 ### Take out NEST (emergency process)
-```
-sequenceDiagram
-    User->>NEST Storage Contract: Take out all NESTs (transactions) that have been deposited at the transaction origination address.
-NEST Storage Contract-->>User: NEST Transfer (internal transaction)
-```
+![image](https://nestapp.oss-cn-beijing.aliyuncs.com/NestCoreForGitHub/NESTAbonusContracts_4.png)
 
 ### Receive dividends
-```
-sequenceDiagram
-    User->>Dividend Calculation Contract: Receive Dividend (Transaction)
-Dividend pool contract-->>Dividend Calculation Contract: Get ETH quantity (internal transaction)
-NEST storage contract-->>Dividend Calculation Contract: Get the transaction initiation address NEST deposit amount (internal transaction)
-Dividend Calculation Contract-->>Dividend pool contract: Transfer ETH dividend to the transaction origination address (internal transaction)
-```
+![image](https://nestapp.oss-cn-beijing.aliyuncs.com/NestCoreForGitHub/NESTAbonusContracts_5.png)
 
 ## Contract method
 > 1.Get the nest liquidity quota：function allValue() public view returns (uint256)
