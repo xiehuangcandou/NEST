@@ -1,7 +1,7 @@
 # Dividend system contract specification document
 [TOC]
 ## Architecture
-```
+```mermaid
 graph TB
     Business_Contract -. Fees .-> Dividend_pool_contract
 User -. Store_NEST .-> NEST_Storage_Contract
