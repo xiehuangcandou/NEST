@@ -1,4 +1,4 @@
-章节一：NEST Protocol 1.0
+# NEST Protocol 1.0
 
 在介绍 NEST Protocol 2.0 之前，我们需要了解一下 NEST Protocol 1.0 是什么？
 
