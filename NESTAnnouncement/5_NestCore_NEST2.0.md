@@ -1,6 +1,6 @@
 # NEST Protocol 1.0
 
-在介绍 NEST Protocol 2.0 之前，我们需要了解一下 NEST Protocol 1.0 是什么？
+> 在介绍 NEST Protocol 2.0 之前，我们需要了解一下 NEST Protocol 1.0 是什么？
 
 根据此前的定义，NEST 是一个基于以太坊开发的 DeFi 生态协议。NEST Protocol 1.0 版本主要包含 NEST Token 合约、NEST 矿池合约 和 NEST 分红合约。其采用【使用即挖矿】的方式释放 NEST Token，进而激励用户参与 NEST DeFi 产品的使用；在用户使用 DeFi 产品过程中收取的 ETH 手续费会全部进入系统分红池，用于每周的社区分红，而且是 100% 分红；用户持有 NEST 的占比越多，分红收益越多。
 
