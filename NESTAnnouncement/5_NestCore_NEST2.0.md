@@ -19,30 +19,43 @@
  
 # NEST-Price of NEST Protocol 2.0
  
+ 
 > NEST-Price is 2.0 NEST Protocol in the most important part, representing NEST core system of values.
  
+ 
 ## So, what is NEST-Price ?
  
+ 
 > If it is more popular in the industry, NEST-Price is a decentralized oracle system based on the Ethereum network.If it is described in a more essential language, NEST-Price is a distributed quotation system that implements the synchronization of price facts on the chain in a decentralized manner .
  
+ 
 > NEST-Price defines and implements a new mechanism for generating on-chain facts on the blockchain network. Game theory uses its market, miner offer by way of the chain price at the fact that the market is generated in synchronization chain on , combined with NEST offer mining mechanism, miners excite, making it a logical loop distributed quotation system, Perfectly synchronize the off- chain price facts on the chain to form NEST-Price .
  
+ 
 > The NEST-Price quote system is mainly composed of 4 core parts: a quote generation module, a quote purchase module, a quote fund management module, and an on- chain price generation module. Next, let's take a look at the specific implementation of NEST-Price .
  
+ 
 ## Quotation system description
  
+ 
 > The NEST-Price quote system supports direct quotes for ERC20 Token / ETH trading pairs. At the initial stage of the system's launch, only the following two trading pairs are supported:
  
+ 
 > 1.USDT / ETH
  
+ 
 > 2.HT / ETH
  
+ 
 > Quotation miner: Anyone can participate in the quotation and perform NEST mining without threshold.
  
+ 
 ## How do miners quote?
  
+ 
 > When a miner makes a quote, he needs to transfer the specific amount of assets corresponding to the quote transaction pair. The minimum unit is 1 ETH. Assuming that the current market price of the USDT / ETH trading pair is 200 USDT = 1 ETH, then the quoted miner needs to transfer both the quoted asset of 200 USDT and 1 ETH to the quoted contract. After the transfer is successful, the quote contract will display the time of 25 blocks (about 5 minutes) in the quote market ; during this period, anyone can redeem according to the miner's quote data; for example, I can Transfer 200 USDT into the quote contract to exchange 1 ETH, and I can also transfer 1 ETH into the quote contract to exchange 200 USDT. This means that if the price of the miner deviates significantly from the real market price, it will provide an arbitrage opportunity for others, and anyone can participate in arbitrage; through this arbitrage penalty mechanism, the miner will be quoted at the market fair price , And then send real and effective price information to the quotation system.
  
+ 
 ## What prices will be adopted by the system?
  
 > If the quotation initiated by the miner is not fully eaten after block 25 , that is, the quotation assets in the quotation are still left, then this quotation data will be used by the quotation system. Conversely, if the arbitrageur completely eats the quotation, its quotation data will be automatically discarded, and it will not participate in the on- chain price formation .
