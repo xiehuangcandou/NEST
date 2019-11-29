@@ -1,7 +1,6 @@
 # NEST Protocol 1.0
- 
-> Before introducing NEST Protocol 2.0 , we need to understand what is NEST Protocol 1.0 ?
- 
+> Before introducing NEST Protocol 2.0 , we need to understand what is NEST Protocol 1.0? 
+
 > According to the previous definition, NEST is a DeFi ecological protocol developed based on Ethereum . The NEST Protocol 1.0 version mainly includes NEST Token contract, NEST mining pool contract and NEST dividend contract. It releases the NEST Token in the form of [use as-you-go mining] , thereby incentivizing users to participate in the use of NEST DeFi products; all ETH processing fees collected during the use of DeFi products by users will enter the system dividend pool for weekly community dividends , And it is a 100% dividend; the more users hold NEST , the more dividends they receive.
  
 > Since the launch of the NEST Protocol version 1.0 in December 2018 , DeFi products and services such as decentralized digital asset mortgage lending, auctions, and quizzes have been launched . Among them , the performance of decentralized digital asset mortgage lending products on NEST is particularly outstanding. It uses the "on- chain contract + excess mortgage + no compensation " mechanism to achieve the decentralization of digital asset mortgage lending. As of October 2019 , a total of 32109 orders have been transacted for this mortgage loan product , and the cumulative transaction amount: 663368 ETH + 52517900 TUSD , which has long occupied the top of the daily turnover of Ethereum ecological DeFi products!   
