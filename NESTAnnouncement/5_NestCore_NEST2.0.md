@@ -266,23 +266,30 @@ N = (e / E) * ( M / C)
 ## 1 , NEST ecosystem group consisting of
  
  
-NestCore developer group: develop and maintain the NEST Protocol ;
+> NestCore developer group: develop and maintain the NEST Protocol ;
  
  
-NEST DAPP developer team: develop and maintain NEST DAPP ;
+> NEST DAPP developer team: develop and maintain NEST DAPP ;
  
-DeFi product developer group: a developer team corresponding to various DeFi products;
+ 
+> DeFi product developer group: a developer team corresponding to various DeFi products;
  
-NEST-Price quote miners: Miners participating in NEST-Price quotes;
+ 
+> NEST-Price quote miners: Miners participating in NEST-Price quotes;
  
-NEST-Price arbitrage miners: professional arbitrage institutions and quantitative institutions;
+ 
+> NEST-Price arbitrage miners: professional arbitrage institutions and quantitative institutions;
  
-NEST DeFi user group: DeFi users;
+ 
+> NEST DeFi user group: DeFi users;
  
-NEST Token investors: NEST Token holders, NEST consensus maintainers and promoters;
+ 
+> NEST Token investors: NEST Token holders, NEST consensus maintainers and promoters;
  
-NestNode Guardian Node: NEST consensus maintainer and promoter;
+ 
+> NestNode Guardian Node: NEST consensus maintainer and promoter;
  
+ 
 ## 2 , NEST enthusiast community building
  
 Fire letter autonomous community: 120,000 people
@@ -290,22 +297,31 @@ Telegram exchange community: 50,000 people
  
 ## 3 , NEST Protocol partners
  
-NEST DAPP Development Team : The NEST DAPP team is a professional development team from overseas that focuses on blockchain product development and interactive research and development. They developed the NEST DAPP smart contract front-end interaction tool based on the NEST Protocol .
+ 
+> NEST DAPP Development Team : The NEST DAPP team is a professional development team from overseas that focuses on blockchain product development and interactive research and development. They developed the NEST DAPP smart contract front-end interaction tool based on the NEST Protocol .
  
-Square Foundation Ethernet : Ethernet Square Foundation is a registered Swiss non-profit organization, designed to manage Ethernet currency sales in the financing of the fund, in order to better serve the Ethernet Technology Square and to the center of ecosystem services. The NEST Protocol is a decentralized protocol developed based on the Ethereum network.NestCore maintains close communication and cooperation with the Ethereum Foundation to jointly promote the development of the Ethereum ecosystem.
+ 
+> Square Foundation Ethernet : Ethernet Square Foundation is a registered Swiss non-profit organization, designed to manage Ethernet currency sales in the financing of the fund, in order to better serve the Ethernet Technology Square and to the center of ecosystem services. The NEST Protocol is a decentralized protocol developed based on the Ethereum network.NestCore maintains close communication and cooperation with the Ethereum Foundation to jointly promote the development of the Ethereum ecosystem.
  
-Know Chuangyu : Beijing knows that Chuangyu is the most influential security company in China, providing anti- DDoS attacks, anti-black and intrusion prevention, smart contract auditing, computing power security monitoring, public chain auditing, penetration testing, etc. for the blockchain industry. The security solution has been highly recognized by the Ministry of Public Security, Supreme Law, General Administration of Industry and Commerce, China Merchants Bank, CITIC Securities, Tencent, JD.com, Bitmain and other government departments and leading global technology companies.
+ 
+> Know Chuangyu : Beijing knows that Chuangyu is the most influential security company in China, providing anti- DDoS attacks, anti-black and intrusion prevention, smart contract auditing, computing power security monitoring, public chain auditing, penetration testing, etc. for the blockchain industry. The security solution has been highly recognized by the Ministry of Public Security, Supreme Law, General Administration of Industry and Commerce, China Merchants Bank, CITIC Securities, Tencent, JD.com, Bitmain and other government departments and leading global technology companies.
  
-An laboratories : Ann ratio (SECBIT) laboratory block chain industry in China the most representative block chain security company , focused on research contracts and trusted intelligent protocol security consensus. The contract security and formal verification of the NEST Protocol is provided by Abe Laboratories.
+ 
+> An laboratories : Ann ratio (SECBIT) laboratory block chain industry in China the most representative block chain security company , focused on research contracts and trusted intelligent protocol security consensus. The contract security and formal verification of the NEST Protocol is provided by Abe Laboratories.
  
-DVP vulnerability platform : DVP is a decentralized vulnerability platform. DVP implements responsible disclosure of vulnerabilities in an all-round and multi-dimensional manner through a self-organized organization of the security community. At the same time, it serves as a core link between white hats and manufacturers, and builds an efficient and transparent security information platform for users of blockchain vendors. N estCore and DVP cooperation jointly initiated NEST Protocol vulnerability reward program, as NEST escort development.
+ 
+> DVP vulnerability platform : DVP is a decentralized vulnerability platform. DVP implements responsible disclosure of vulnerabilities in an all-round and multi-dimensional manner through a self-organized organization of the security community. At the same time, it serves as a core link between white hats and manufacturers, and builds an efficient and transparent security information platform for users of blockchain vendors. N estCore and DVP cooperation jointly initiated NEST Protocol vulnerability reward program, as NEST escort development.
  
-Hash think tank : Hash think tank is China's leading digital economy industry think tank type platform, which is jointly contributed by Huawen Media and Times Media. Committed to promoting the effective integration of "digital economy + real economy". Deeply cultivated in representative fields of digital economy such as artificial intelligence, big data, and blockchain. The marketing and media cooperation of the NEST Protocol are provided by the Think Tank.
+ 
+> Hash think tank : Hash think tank is China's leading digital economy industry think tank type platform, which is jointly contributed by Huawen Media and Times Media. Committed to promoting the effective integration of "digital economy + real economy". Deeply cultivated in representative fields of digital economy such as artificial intelligence, big data, and blockchain. The marketing and media cooperation of the NEST Protocol are provided by the Think Tank.
  
-HuobiClub : Based on Huobi Group's own brand resources and ecological advantages, Hu obi Club is committed to creating a professional offline blockchain industry communication and service platform, bringing together global site resources in the blockchain industry, and attracting high-quality teams for it. Carry out a full range of blockchain deep value-added services, integrate the local resources of the site to form a closed loop of the industrial chain, help partners grow, and help the industry develop. NEST Protocol and HuobiClub establish deep partnerships that promote NEST Protocol played a key role in the exchange of dialogue with the block chain industry.
+ 
+> HuobiClub : Based on Huobi Group's own brand resources and ecological advantages, Hu obi Club is committed to creating a professional offline blockchain industry communication and service platform, bringing together global site resources in the blockchain industry, and attracting high-quality teams for it. Carry out a full range of blockchain deep value-added services, integrate the local resources of the site to form a closed loop of the industrial chain, help partners grow, and help the industry develop. NEST Protocol and HuobiClub establish deep partnerships that promote NEST Protocol played a key role in the exchange of dialogue with the block chain industry.
  
-NestFans : NestFans is a co-sponsored the formation of the early miners and enthusiasts by the NEST user autonomous community forum , designed to block the chain industry, users and practitioners offer a exchange learning NEST Protocol of channels, better promote the NEST ecological development and community Consensus building.
+ 
+> NestFans : NestFans is a co-sponsored the formation of the early miners and enthusiasts by the NEST user autonomous community forum , designed to block the chain industry, users and practitioners offer a exchange learning NEST Protocol of channels, better promote the NEST ecological development and community Consensus building.
  
+ 
 # The Summary Of NEST Protocol 
  
  
@@ -314,14 +330,17 @@ NestFans : NestFans is a co-sponsored the formation of the early miners and en
  
 ## Summary about de facto chains :
  
-1. In fact, the essence of the chain is not to " upload " fact information to the chain, but to form (generate) facts on the chain;
+ 
+> 1. In fact, the essence of the chain is not to " upload " fact information to the chain, but to form (generate) facts on the chain;
  
-2 , regardless of the fact that the center of uploading information, or go to the center of the way uploaded, means that the fact that the first produced under the chain on the chain. For a real oracle system , the off-chain facts should be synchronized on the chain;
+ 
+> 2 , regardless of the fact that the center of uploading information, or go to the center of the way uploaded, means that the fact that the first produced under the chain on the chain. For a real oracle system , the off-chain facts should be synchronized on the chain;
  
-3.NEST-Price is unique in that it forms a price fact directly on the chain, while other oracle systems simply upload a price fact to the chain, which is an essential difference.
+ 
+> 3.NEST-Price is unique in that it forms a price fact directly on the chain, while other oracle systems simply upload a price fact to the chain, which is an essential difference.
  
-So, what is the NEST Protocol ?
-NEST Protocol is a decentralized network of price fact prediction machines .
+ 
+> So, what is the NEST Protocol?NEST Protocol is a decentralized network of price fact prediction machines .
 
 ---
 
