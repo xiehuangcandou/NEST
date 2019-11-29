@@ -27,8 +27,8 @@
 
 > NEST-Price 报价系统支持 ERC20 Token / ETH 交易对的直接报价，在系统上线初期，仅支持以下两个交易对：
 
-1.USDT / ETH
-2.HT / ETH
+> 1.USDT / ETH
+> 2.HT / ETH
 
 > 报价矿工：任何人都可以参与报价，进行 NEST 挖矿，无门槛限制。
 
