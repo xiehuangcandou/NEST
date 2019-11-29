@@ -1,3 +1,231 @@
+# NEST Protocol 1.0
+ 
+> Before introducing NEST Protocol 2.0 , we need to understand what is NEST Protocol 1.0 ?
+ 
+> According to the previous definition, NEST is a DeFi ecological protocol developed based on Ethereum . The NEST Protocol 1.0 version mainly includes NEST Token contract, NEST mining pool contract and NEST dividend contract. It releases the NEST Token in the form of [use as-you-go mining] , thereby incentivizing users to participate in the use of NEST DeFi products; all ETH processing fees collected during the use of DeFi products by users will enter the system dividend pool for weekly community dividends , And it is a 100% dividend; the more users hold NEST , the more dividends they receive.
+ 
+> Since the launch of the NEST Protocol version 1.0 in December 2018 , DeFi products and services such as decentralized digital asset mortgage lending, auctions, and quizzes have been launched . Among them , the performance of decentralized digital asset mortgage lending products on NEST is particularly outstanding. It uses the "on- chain contract + excess mortgage + no compensation " mechanism to achieve the decentralization of digital asset mortgage lending. As of October 2019 , a total of 32109 orders have been transacted for this mortgage loan product , and the cumulative transaction amount: 663368 ETH + 52517900 TUSD , which has long occupied the top of the daily turnover of Ethereum ecological DeFi products!   
+ 
+> NEST Protocol version 1.0 has been running on the chain safely and stably for nearly a year. Throughout the process, the NestCore development team is constantly optimizing and upgrading it; at the same time, NEST ecological users have also provided a lot of far-reaching feedback. After a year of precipitation and depth exploration technology, in order to better promote the NEST Protocol development, NestCore development team decided to NEST Protocol 2.0 version of the development and upgrading work, and in 2019 Nian 10 Foreign month announced the " NEST Protocol 2.0 development version plan". In NEST Protocol 2.0 version, NestCore team will NEST system time to adjust and optimize, make them more security, scalability, openness, and more to the center.
+ 
+> After a period of 4 development week, NEST Protocol 2.0 version is finally here !
+ 
+> This review focuses on the NEST Protocol 2.0 . It will describe the specific content of the entire 2.0 version and the profound meaning behind it.
+ 
+# NEST-Price of NEST Protocol 2.0
+ 
+> NEST-Price is 2.0 NEST Protocol in the most important part, representing NEST core system of values.
+ 
+## So, what is NEST-Price ?
+ 
+> If it is more popular in the industry, NEST-Price is a decentralized oracle system based on the Ethereum network.If it is described in a more essential language, NEST-Price is a distributed quotation system that implements the synchronization of price facts on the chain in a decentralized manner .
+ 
+> NEST-Price defines and implements a new mechanism for generating on-chain facts on the blockchain network. Game theory uses its market, miner offer by way of the chain price at the fact that the market is generated in synchronization chain on , combined with NEST offer mining mechanism, miners excite, making it a logical loop distributed quotation system, Perfectly synchronize the off- chain price facts on the chain to form NEST-Price .
+ 
+> The NEST-Price quote system is mainly composed of 4 core parts: a quote generation module, a quote purchase module, a quote fund management module, and an on- chain price generation module. Next, let's take a look at the specific implementation of NEST-Price .
+ 
+## Quotation system description
+ 
+> The NEST-Price quote system supports direct quotes for ERC20 Token / ETH trading pairs. At the initial stage of the system's launch, only the following two trading pairs are supported:
+ 
+> 1.USDT / ETH
+ 
+> 2.HT / ETH
+ 
+> Quotation miner: Anyone can participate in the quotation and perform NEST mining without threshold.
+ 
+## How do miners quote?
+ 
+> When a miner makes a quote, he needs to transfer the specific amount of assets corresponding to the quote transaction pair. The minimum unit is 1 ETH. Assuming that the current market price of the USDT / ETH trading pair is 200 USDT = 1 ETH, then the quoted miner needs to transfer both the quoted asset of 200 USDT and 1 ETH to the quoted contract. After the transfer is successful, the quote contract will display the time of 25 blocks (about 5 minutes) in the quote market ; during this period, anyone can redeem according to the miner's quote data; for example, I can Transfer 200 USDT into the quote contract to exchange 1 ETH, and I can also transfer 1 ETH into the quote contract to exchange 200 USDT. This means that if the price of the miner deviates significantly from the real market price, it will provide an arbitrage opportunity for others, and anyone can participate in arbitrage; through this arbitrage penalty mechanism, the miner will be quoted at the market fair price , And then send real and effective price information to the quotation system.
+ 
+## What prices will be adopted by the system?
+ 
+> If the quotation initiated by the miner is not fully eaten after block 25 , that is, the quotation assets in the quotation are still left, then this quotation data will be used by the quotation system. Conversely, if the arbitrageur completely eats the quotation, its quotation data will be automatically discarded, and it will not participate in the on- chain price formation .
+ 
+## What to do if the quote system is maliciously eaten by an attacker ?
+ 
+> In any decentralized system, attack costs need to be considered, as is the NEST-Price quote system. To prevent an attacker who by malicious eating single cause of price information that depart from or delay occurs, NEST-Price uses to eat a single double quotation mechanism, which must be issued by eating a single sum of their offer while eating single , and Quote fund double.
+ 
+> If the order-taker is a normal order, then his quotation data at the time of the order should be rational and normal ; if the order-taker is a malicious attacker and he wants to achieve his purpose, then his quote data at the time of order should deviate from market data; this time, a larger arbitrage machine will appear on the attacker's malicious quotation will be arbitrageurs in the market quickly digested, this time on the market arbitrageurs will report a rational offer When the order comes out, the price data returns to normal, and the attack fails. If the attacker, rob their own list, then the cost of its future will be higher, the market arbitrage opportunities will be greater, the attacker's own single probability of success will eat less and less, eventually pay The huge loss was eaten by market arbitrageurs and the attack failed. In short, when attackers attack the NEST-Price system, they are playing against the entire market, which is difficult, unimaginable, and the results are self-evident.
+ 
+## NEST-Price price generation mechanism
+ 
+> In the NEST-Price quotation system, the effective price data that is ultimately used exists in each block of Ethereum. We can generate a custom price P by algorithm according to different DeFi business needs. There are three common types of P, namely : timely price (latest price), average price (average price of n blocks), and weighted average price (custom weight).
+ 
+## How does the developer call the price P generated by the NEST-Price quote system ?
+ 
+> In the early days, the price P will not open , NEST developers will take the lead in developing a several classic DeFi products , these products are quoted price P, such as decentralized digital asset-backed lending products, decentralized exchange, stable currency Wait. In the process of using these DeFi products for users, they will charge a small ETH processing fee to pay for the price P. This part of the fee income will go directly to the NEST system dividend pool for the weekly NEST Token holders. ETH dividends .
+ 
+> So how do third-party developers call the price P, please stay tuned for the NEST Protocol Developer Program. (No specific introduction here)
+ 
+# NEST DeFi of NEST Protocol 2.0
+ 
+> In chapter two, we have already learned about the NEST-Price system, as well as its operating principle and price generation mechanism. So what's the use of NEST-Price ?
+ 
+> The definition of blockchain in the field of economic science : "Blockchain is a machine of trust." The biggest core innovation of blockchain is to solve the trust problem in a decentralized manner, without the need to trust and rely on third-party institutions for value transfer. Among them, smart contracts play an important role. It is a set of contracts defined in digital form, helping contract participants to execute the agreement to complete tasks, saving time and tedious steps. 
+ 
+> But in fact, the blockchain cannot actively obtain real-world data. And most of the decentralized products implemented through smart contract technology have a heavy dependence on real-world data, and the DeFi field is particularly urgent. For example, DeFi products and services such as decentralized digital asset mortgages, stablecoins , and insurance all need to introduce real-world price information to complete the logical closed loop of the product itself. However, in the process of invoking market price information, developers have to consider the authenticity, stability, degree of decentralization, and attack costs of value data.
+ 
+> In order to solve the problem of lack of decentralized price information, there are also some solutions in the industry: For example, MakerDAO feeds prices through 14 feed miners to form the so-called "decentralized price"; ChainLink provides price data through off-chain reputation nodes , Forming the so-called "decentralized price". No matter what the plan is, everyone has only one purpose, to provide a callable "decentralized price" for DeFi products. At this point, you should also understand that NEST-Price has done the same thing, generating decentralized price data in the way of miner quote mining, providing callable decentralized price information for NEST DeFi products . .
+ 
+> Since there are competing products, I have to explain the advantages of NEST-Price :
+ 
+> 1 , more of decentralization. NEST-Price synchronizes price information on the chain by means of "miner quote mining" . Everyone can become a quote miner, participate in quotes, and is very decentralized (distributed);
+ 
+> 2. The cost of attack is higher. In chapter two, we have described the mechanism of quotation and eating orders. If an attacker wants to deviate from the NEST-Price , the cost of the attack is extremely high ; the more the attack, the higher the cost, the attacker falls into the death spiral;
+ 
+> 3 , more real and effective. In the NEST quotation mechanism, every quotation made by the miner must pay real money and bear the high risk cost of evil, and the authenticity is self-evident;
+ 
+> 4. Higher stability. NEST-Price 's price data is strictly guaranteed by a set of scientific algorithms . Continuously provide stable and effective price information for DeFi products. There are several types of timely prices, daily average prices, and weighted average prices for DeFi developers to choose freely.
+ 
+> the above. We now understand the role of NEST-Price and its industry advantages.
+ 
+## So, let's introduce NEST DeFi :
+ 
+> We already have the NEST-Price available , and now we make a definition: whenever a DeFi product or service that references NEST-Price price data , we collectively call it NEST DeFi .
+ 
+> NEST DeFi is a Wall Street based on the NEST-Price blockchain world. In the NEST DeFi layout, we can see various forms of decentralized mortgage lending products, constant currency, decentralized exchange ( DEX ), decentralized digital asset insurance, and decentralized digital asset "bank". DeFi products and services. As long as you hold digital assets, you can find the DeFi products and services you need in NEST DeFi to meet all your financial needs regarding digital assets.
+ 
+> As we all know, it is difficult for ordinary users to interact directly with the blockchain, because not everyone can type code. Therefore, the third-party development team developed a decentralized smart contract interaction tool based on the NEST Protocol -NEST DAPP . In this DAPP , you can easily use NEST DeFi to manage your digital assets.
+ 
+> Above, this is NEST DeFi , on Wall Street!
+ 
+# NEST Economics of NEST Protocol 2.0
+ 
+> This chapter mainly describes the economics in the NEST Protocol , including the NEST Token distribution mechanism, value model, and economic model.
+ 
+## First, NEST Token Profile
+ 
+> NEST ( NEST Token ) is a token issued by the NEST Protocol based on the Ethereum ERC20 protocol , and is the sole equity token of the NEST ecosystem.
+ 
+> Total number of NEST Tokens : 10 billion, never issued again!
+ 
+> NEST Token release method: quote mining
+ 
+> NEST Token contract address: 0x04abeda201850ac0124161f037efd70c74ddc74c
+ 
+> NEST Token Block Browser: https://etherscan.io/token/0x04abeda201850ac0124161f037efd70c74ddc74c
+ 
+## Second, the NEST Token distribution plan
+ 
+> The total number of NEST Tokens is 10 billion. The founding developers have no reservations, no pre- mining , and no pre-sale. 100% of them are released by miners through " quotation mining".
+ 
+> The distribution ratio of NEST Token is as follows:
+ 
+> Miners 80% , the developer 5% , guardian nodes 15% .
+ 
+## Third, NEST Token release mechanism
+> The initial year ( 2.4 million blocks) release 10 Yi NEST , divided equally to each block about the release of 400 NEST , a year after the decay of 10% .
+> Initial value: Given that NEST has already mined nearly 1.1 billion, according to the above algorithm, this NEST Protocol 2.0 upgrade is in the first attenuation zone. Therefore, since the launch , the initial block is recorded as the 2788888 mining block. Each block has 360 NESTs .
+> Miners obtain NEST Tokens through quote mining. Each quote requires an ETH processing fee (1% of the ETH amount at the time of the quote ), and the system-charged fees are all entered into the dividend contract. This means that behind every NEST Token release, miners are paying real money, not free.
+> Calculation of NEST mining quantity per miner's quote:
+> First, we must first calculate the number of NEST mining rewards M contained in the block of the quoted transaction. If the height difference between the block and the previous block containing the quoted transaction is K, then:
+M = K * 360
+> Assuming that the block that contains the quote of trading on the types C types , of which a certain kind of transaction type of fee is the sum of E, with the same type of a sum offer to pay the fee is e, then the sum The quoted NEST mining quantity is N :
+N = (e / E) * ( M / C)
+ 
+## Fourth , NEST Token dividend income
+ 
+> First introduce the source of NEST dividend income:
+ 
+> Source 1 : quote the fee paid by the miner during the mining process. Mining miners who participate in bidding quotes are required to pay ETH processing fees, and these processing fees will all enter the system dividend pool .
+ 
+> Source 2 : Value generated by NEST-Price . When a DeFi product calls NEST-Price , it is necessary to pay a certain percentage of ETH fees to the NEST Protocol , and the specific income is all entered into the system dividend pool .
+ 
+> User dividend plan: The NEST dividend contract calculates the corresponding amount of ETH dividends according to the proportion of each user holding the NEST Token . The higher the proportion of NEST holdings, the more the ETH dividend income will be, and the dividend will be paid once a week.
+ 
+> Income leveling mechanism: The system will withdraw 10% of ETH assets from the dividend income of each cycle and deposit them in the leveling contract, and the remaining 90% of ETH will be distributed . Stabilization of ETH contract will be saving to prepare for a week of ETH be filled insufficient income . The income leveling mechanism makes the dividend income of NEST investors relatively stable, thereby promoting the stable and sustainable development of NEST ecology . For the judgment criterion of whether to use the ETH funds of the leveling contract, please read the document "NEST income leveling mechanism description" .
+ 
+# NEST DAO of NEST Protocol 2.0
+ 
+> We all know that no system architecture is flawless from the beginning, even if it is Bitcoin. The NEST Protocol is the same. It also needs to be continuously optimized and upgraded to make it more secure, expandable, open, and more decentralized. In this process, we need an autonomous organization to promote the development of the NEST Protocol . Here we call this organization NEST DAO .
+ 
+> NEST DAO is essentially an on-chain governance system, which mainly consists of two major modules, namely the NEST voting system and the NEST guardian node NestNode .
+ 
+> I. Introduction to the NEST voting system
+ 
+> First of all: Any wallet address holding a NEST Token has an inherent voting right to participate in NEST voting.
+ 
+> The voting system itself is also a contract system. Each vote requires the voting initiator to deploy a voting contract. At the same time, the contract needs to open source code and explain the voting content. In order to encourage NEST holders to vote, vote the contract deployer can turn to vote in a certain number of contracts NEST , in order to motivate people to vote; if the vote goes through, this NEST will be destroyed; if the vote did not pass, the deployer NEST can be retrieved from the contract .
+ 
+> After reading the contract code and voting content, NEST Token holders can make their own judgments and decide whether to participate in voting (participation in voting is deemed to be supported, and non-participation is considered not to support). When the number of NESTs participating in the voting exceeds 51 % of the NEST circulation , it is deemed to have passed the voting. At this time, anyone can trigger the voting contract and execute the voting content in the contract.
+ 
+> Second, the introduction of the Guardian Node NestNode
+ 
+> Guardian nodes are what we usually call "super nodes". The Guardian Node NestNode is an important part of the NEST ecosystem. It provides various resources and funds for the development of the NEST Protocol , and is the core source of power for the early development of NEST . There will be rewards for paying. In the process of NEST development, NestNode also enjoys some of the benefits and influence brought by the NEST ecosystem, which are mainly reflected in the following two points:
+ 
+> 1 , NEST Token usufruct: in NEST Token release distribution mechanism, the miners accounted for 80% , developers accounted for 5% , guardian node accounted for 15% ; can be simply understood as: Quote miners in the mining process, NEST contract mining pool every release 100 Mei NEST Token , of which 15 Mei assigned to the guardian node NestNode .
+ 
+> 2 , NEST voting rights: NestNode holders have NEST system of voting rights, rights more important than NEST 'Importance higher weight ratio between the two will follow right proportion NEST liquidity adjusted .
+ 
+> In order to better reflect the NEST to the center of the features of the system, the node guardian NestNode been Token of. NestNode is also a Token issued based on the Ethereum ERC20 protocol , with a total of 1500 tokens . Tokenized guardian nodes can freely transfer and trade.
+ 
+> Whether it is who owns NestNode , he will actively promote NEST Protocol development, actively participate NEST ecological construction, because he himself also is NEST decentralized project core beneficiary .
+ 
+> The above is the introduction of NEST DAO .
+ 
+# NEST Community of NEST Protocol 2.0
+ 
+> The NEST community mainly introduces the current community composition of the NEST ecosystem and the specific situation of the fan community and partners around the NEST Protocol .
+ 
+## 1 , NEST ecosystem group consisting of
+ 
+NestCore developer group: develop and maintain the NEST Protocol ;
+ 
+NEST DAPP developer team: develop and maintain NEST DAPP ;
+ 
+DeFi product developer group: a developer team corresponding to various DeFi products;
+ 
+NEST-Price quote miners: Miners participating in NEST-Price quotes;
+ 
+NEST-Price arbitrage miners: professional arbitrage institutions and quantitative institutions;
+ 
+NEST DeFi user group: DeFi users;
+ 
+NEST Token investors: NEST Token holders, NEST consensus maintainers and promoters;
+ 
+NestNode Guardian Node: NEST consensus maintainer and promoter;
+ 
+## 2 , NEST enthusiast community building
+ 
+Fire letter autonomous community: 120,000 people
+Telegram exchange community: 50,000 people
+ 
+## 3 , NEST Protocol partners
+ 
+NEST DAPP Development Team : The NEST DAPP team is a professional development team from overseas that focuses on blockchain product development and interactive research and development. They developed the NEST DAPP smart contract front-end interaction tool based on the NEST Protocol .
+ 
+Square Foundation Ethernet : Ethernet Square Foundation is a registered Swiss non-profit organization, designed to manage Ethernet currency sales in the financing of the fund, in order to better serve the Ethernet Technology Square and to the center of ecosystem services. The NEST Protocol is a decentralized protocol developed based on the Ethereum network.NestCore maintains close communication and cooperation with the Ethereum Foundation to jointly promote the development of the Ethereum ecosystem.
+ 
+Know Chuangyu : Beijing knows that Chuangyu is the most influential security company in China, providing anti- DDoS attacks, anti-black and intrusion prevention, smart contract auditing, computing power security monitoring, public chain auditing, penetration testing, etc. for the blockchain industry. The security solution has been highly recognized by the Ministry of Public Security, Supreme Law, General Administration of Industry and Commerce, China Merchants Bank, CITIC Securities, Tencent, JD.com, Bitmain and other government departments and leading global technology companies.
+ 
+An laboratories : Ann ratio (SECBIT) laboratory block chain industry in China the most representative block chain security company , focused on research contracts and trusted intelligent protocol security consensus. The contract security and formal verification of the NEST Protocol is provided by Abe Laboratories.
+ 
+DVP vulnerability platform : DVP is a decentralized vulnerability platform. DVP implements responsible disclosure of vulnerabilities in an all-round and multi-dimensional manner through a self-organized organization of the security community. At the same time, it serves as a core link between white hats and manufacturers, and builds an efficient and transparent security information platform for users of blockchain vendors. N estCore and DVP cooperation jointly initiated NEST Protocol vulnerability reward program, as NEST escort development.
+ 
+Hash think tank : Hash think tank is China's leading digital economy industry think tank type platform, which is jointly contributed by Huawen Media and Times Media. Committed to promoting the effective integration of "digital economy + real economy". Deeply cultivated in representative fields of digital economy such as artificial intelligence, big data, and blockchain. The marketing and media cooperation of the NEST Protocol are provided by the Think Tank.
+ 
+HuobiClub : Based on Huobi Group's own brand resources and ecological advantages, Hu obi Club is committed to creating a professional offline blockchain industry communication and service platform, bringing together global site resources in the blockchain industry, and attracting high-quality teams for it. Carry out a full range of blockchain deep value-added services, integrate the local resources of the site to form a closed loop of the industrial chain, help partners grow, and help the industry develop. NEST Protocol and HuobiClub establish deep partnerships that promote NEST Protocol played a key role in the exchange of dialogue with the block chain industry.
+ 
+NestFans : NestFans is a co-sponsored the formation of the early miners and enthusiasts by the NEST user autonomous community forum , designed to block the chain industry, users and practitioners offer a exchange learning NEST Protocol of channels, better promote the NEST ecological development and community Consensus building.
+ 
+# The Summary Of NEST Protocol 
+ 
+> The NEST-Price in the NEST Protocol is a major innovation and breakthrough in the blockchain industry.It synchronizes the off-chain price facts on the chain in a highly decentralized manner , forming true and effective price data on the chain. . NEST-Price is settled application block chain technology provides the most important of infrastructure , promoting the development of the whole industry has played a huge role!
+ 
+## Summary about de facto chains :
+ 
+1. In fact, the essence of the chain is not to " upload " fact information to the chain, but to form (generate) facts on the chain;
+ 
+2 , regardless of the fact that the center of uploading information, or go to the center of the way uploaded, means that the fact that the first produced under the chain on the chain. For a real oracle system , the off-chain facts should be synchronized on the chain;
+ 
+3.NEST-Price is unique in that it forms a price fact directly on the chain, while other oracle systems simply upload a price fact to the chain, which is an essential difference.
+ 
+So, what is the NEST Protocol ?
+NEST Protocol is a decentralized network of price fact prediction machines .
+
+---
+
 # NEST Protocol 1.0
 
 ## 在介绍 NEST Protocol 2.0 之前，我们需要了解一下 NEST Protocol 1.0 是什么？
