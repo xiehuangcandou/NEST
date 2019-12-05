@@ -1,3 +1,40 @@
+# Dividend adjustment
+## Revenue leveling threshold Q:
+
+> Q = 100 * (1 + 3%) ^ n
+
+> N in the above algorithm: the number of NESTs that have been mined is n billion, and n is an integer.
+
+## Leveling Algorithm
+
+> Define this week's dividend income as: E;
+
+> The cumulative total of ETH in the stabilization fund is: M;
+
+> If E ≥ Q:
+
+> The amount of ETH entered into the stabilization fund this week is: E * 10%;
+
+> If E * 90% <Q:
+
+> (Q-E) ETH will be taken from the leveling fund, the amount will be filled up to Q ETH, and then dividends will be paid. At this time, the number of dividends this week is Q ETH;
+
+> If E * 90% ≥ Q:
+
+> The actual number of ETH dividends this week is: E * 90%;
+
+> If E <Q:
+
+> The amount of ETH entered into the stabilization fund this week is: 0;
+
+> Will be taken from the leveling fund M: (Q-E) ETH, make up the amount to Q ETH, and then pay dividends. At this time, the number of dividends this week is Q ETH;
+
+> If it cannot be filled, the number of dividends this week is: M + E ETH.
+
+> NEST level contract address: 0xc2CdF3457819A61720166d524F6E320C5451092C
+
+---
+
 # 分红调整
 ## 收益平准阈值 Q ：
 
