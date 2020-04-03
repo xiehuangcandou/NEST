@@ -1,7 +1,7 @@
 # The first version of NEST3.0 test network
 
 
-合约 | 映射参数 | 地址
+Contract | Mapping parameters | Address
 ---|---|--- 
 nestToken Contract | nest | 0x6002345a217373F625C79B37e29BACe12E82E31f
 vote Contract |  | 0xCde8200968008F20FC3cDEB65c5EF23eC80D143E
@@ -23,9 +23,9 @@ nTokenAuction Contract | nest.nToken.tokenAuction | 0x10FB8Fd912F876810661f2D8fC
 nTokenMapping Contract | nest.nToken.tokenMapping | 0xCB120D3ed59643275Dbf4c633822606ab874aD52
 
 
-静态地址 | 映射参数 | 地址
+Static address | Mapping parameters | Address
 ---|---|---
-开发者地址 | nest.v3.coder | 
+Developer address | nest.v3.coder | 
 
 
 ---
