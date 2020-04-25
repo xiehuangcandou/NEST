@@ -1,0 +1,58 @@
+Nest: 0x04abEdA201850aC0124161F037Efd70c74ddC74C
+映射合约:0x5E7db2FFc5b2c7C47103e4F21C702bc402603fBf
+
+矿池合约: 0x923F80828663E44e0FFD5eB499686dC1CCc78476
+矿池逻辑: 0x9C3C7bcf8993A58410016E29882c78B552D5C9b4
+报价数据合约: 0x72B07FC5753a3564CfcAC50cD6f246187d2d4306
+报价工厂: 0x4F391C202a906EED9e2b63fDd387F28E952782E2
+价格合约: 0x60cbAeEe17D19458420cE572CA32a8de337Bcc2E
+
+分红nest锁仓: 0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF
+分红池合约: 0x607B80a3498F01f87b889486f4E7f82C98CF0584
+平准合约: 0xc2CdF3457819A61720166d524F6E320C5451092C
+分红逻辑合约: 0xF67B829397Dc05751a98f243DbdE5Db63f86E7f6
+
+守护者节点Token合约: 0xC028E81e11F374f7c1A3bE6b8D2a815fa3E96E6e
+守护者节点Nest存储合约: 0x101D8b63A081dFfF2B1364864345b7F071b052ac
+守护者节点领取数据合约: 0xb086F99E36c2c0ef6c051EE9E4d638717BBc6cbC
+守护者节点分配合约: 0x472c31697633daCd24C4674b4571d4A393d54870
+
+
+---
+
+
+Nest: 0x04abEdA201850aC0124161F037Efd70c74ddC74C
+
+Mapping contract: 0x5e7db2ffc5b2c7c47103e4f21c702bc402603fbf
+
+
+
+Pool contract: 0x923f80828663e44e0ffd5eb499686dc1cc78476
+
+Ore pool logic: 0x9c3c7bcf8993a5841016e29882c78b552d5c9b4
+
+Quotation data contract: 0x72b07fc5753a3564cfcac50cd6f246187d2d4306
+
+Quotation factory: 0x4f391c202a906eed9e2b63fd387f28e952782e2
+
+Price contract: 0x60cbaeee17d19458420ce572ca32a8de337bcc2e
+
+
+
+Dividend nest lock: 0x561d0d6c498a379574eaaa4a5f2532b223ffaebf
+
+Dividend pool contract: 0x607b80a3498f01f87b889486f4e7f82c98cf0584
+
+Levelized contract: 0xc2cdf3457819a61720166d524f6e320c545092c
+
+Dividend logical contract: 0xf67b829397dc05751a98f243dbde5db63f86e7f6
+
+
+
+Token contract of guardian node: 0xc028e81e11f374f7c1a3be6b8d2a815fa3e96e6e
+
+Guardian node nest storage contract: 0x101d8b63a081dff2b1364864345b7f071b052ac
+
+The guardian node receives the data contract: 0xb086f99e36c2c0ef6c051ee9e4d638717bbc6cbc
+
+Guardian node allocation contract: 0x472c31697633dacd24c4674b4571d4a393d54870
